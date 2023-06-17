@@ -17,26 +17,27 @@ public class FootballMatch implements Match {
 
     @Override
     public String getHomeTeam() {
-        return null;
+        return homeTeam;
     }
 
     @Override
     public String getAwayTeam() {
-        return null;
+        return awayTeam;
     }
 
     @Override
     public int getHomeScore() {
-        return 0;
+        return homeScore;
     }
 
     @Override
     public int getAwayScore() {
-        return 0;
+        return awayScore;
     }
 
     @Override
     public void updateScore(int homeScore, int awayScore) {
-
+        this.homeScore = homeScore;
+        this.awayScore = awayScore;
     }
 }
