@@ -8,6 +8,13 @@ public class FootballMatch implements Match {
     private int homeScore;
     private int awayScore;
 
+    public FootballMatch(String homeTeam, String awayTeam) {
+        this.homeTeam = homeTeam;
+        this.awayTeam = awayTeam;
+        this.homeScore = 0;
+        this.awayScore = 0;
+    }
+
     @Override
     public String getHomeTeam() {
         return null;
