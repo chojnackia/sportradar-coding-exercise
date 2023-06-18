@@ -46,3 +46,9 @@ To use the Football Scoreboard Library in your project, follow these steps:
     - Import the necessary classes and interfaces from the library.
     - Create an instance of the `FootballScoreboard` class and use its methods to manage the match scores.
 
+
+## Notes
+
+I assumed, that this library will be used in a single threaded applications, and that there could be 
+multiple Scoreboard instances, for example to have separate scoreboards for different leagues.
+I didn't use Spring since there was no need for that, and now this library can be more lightweight. 

@@ -1,11 +1,14 @@
 package sportradar.coding.exercise.scoreboard.impl;
 
 import sportradar.coding.exercise.match.Match;
+import sportradar.coding.exercise.match.exception.MatchNotFoundException;
 import sportradar.coding.exercise.match.impl.FootballMatch;
 import sportradar.coding.exercise.scoreboard.Scoreboard;
-import sportradar.coding.exercise.match.exception.MatchNotFoundException;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class FootballScoreboard implements Scoreboard {
     private List<Match> matches;
