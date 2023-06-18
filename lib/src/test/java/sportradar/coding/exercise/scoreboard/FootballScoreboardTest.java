@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sportradar.coding.exercise.match.Match;
+import sportradar.coding.exercise.scoreboard.exception.MatchNotFoundException;
 import sportradar.coding.exercise.scoreboard.impl.FootballScoreboard;
 
 import java.util.List;
@@ -72,5 +73,19 @@ public class FootballScoreboardTest {
         Match match2 = matchesInProgress.get(1);
         Assertions.assertEquals("Team 1", match2.getHomeTeam());
         Assertions.assertEquals("Team 2", match2.getAwayTeam());
+    }
+
+    @Test
+    public void testUpdateScoreWithNonExistentMatchThrowsMatchNotFoundException() {
+        Assertions.assertThrows(MatchNotFoundException.class, () -> {
+            scoreboard.updateScore("Team A", "Team B", 2, 1);
+        });
+    }
+
+    @Test
+    public void testFinishNonExistentMatchThrowsMatchNotFoundException() {
+        Assertions.assertThrows(MatchNotFoundException.class, () -> {
+            scoreboard.finishMatch("Team A", "Team B");
+        });
     }
 }
