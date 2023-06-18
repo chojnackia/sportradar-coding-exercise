@@ -5,16 +5,13 @@ import sportradar.coding.exercise.match.impl.FootballMatch;
 import sportradar.coding.exercise.scoreboard.Scoreboard;
 import sportradar.coding.exercise.match.exception.MatchNotFoundException;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class FootballScoreboard implements Scoreboard {
     private List<Match> matches;
 
     public FootballScoreboard() {
-        this.matches = new ArrayList<>();
+        this.matches = new LinkedList<>();
     }
 
     @Override
