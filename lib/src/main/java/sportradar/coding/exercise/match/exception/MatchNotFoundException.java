@@ -1,4 +1,4 @@
-package sportradar.coding.exercise.scoreboard.exception;
+package sportradar.coding.exercise.match.exception;
 
 public class MatchNotFoundException extends RuntimeException {
 

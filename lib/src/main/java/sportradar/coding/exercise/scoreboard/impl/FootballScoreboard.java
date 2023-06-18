@@ -3,7 +3,7 @@ package sportradar.coding.exercise.scoreboard.impl;
 import sportradar.coding.exercise.match.Match;
 import sportradar.coding.exercise.match.impl.FootballMatch;
 import sportradar.coding.exercise.scoreboard.Scoreboard;
-import sportradar.coding.exercise.scoreboard.exception.MatchNotFoundException;
+import sportradar.coding.exercise.match.exception.MatchNotFoundException;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import sportradar.coding.exercise.match.Match;
-import sportradar.coding.exercise.scoreboard.exception.MatchNotFoundException;
+import sportradar.coding.exercise.match.exception.MatchNotFoundException;
 import sportradar.coding.exercise.scoreboard.impl.FootballScoreboard;
 
 import java.util.List;
