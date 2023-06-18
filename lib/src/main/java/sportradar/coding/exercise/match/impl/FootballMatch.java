@@ -37,7 +37,11 @@ public class FootballMatch implements Match {
 
     @Override
     public void updateScore(int homeScore, int awayScore) {
-        this.homeScore = homeScore;
-        this.awayScore = awayScore;
+        if (homeScore < 0 || awayScore < 0) {
+            throw new IllegalArgumentException("Score can't be a negative value");
+        } else {
+            this.homeScore = homeScore;
+            this.awayScore = awayScore;
+        }
     }
 }
