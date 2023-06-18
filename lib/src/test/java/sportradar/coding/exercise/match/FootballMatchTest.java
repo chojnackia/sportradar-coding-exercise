@@ -12,6 +12,7 @@ public class FootballMatchTest {
     public void setUp() {
         match = new FootballMatch("Home Team", "Away Team");
     }
+
     @Test
     public void testUpdateScore() {
         match.updateScore(2, 1);
@@ -39,4 +40,9 @@ public class FootballMatchTest {
         Assertions.assertEquals(0, match.getAwayScore());
     }
 
+    @Test
+    public void testThatUpdateScoreWithNegativeValueThrowsIllegalArgumentException() {
+        Assertions.assertThrows(IllegalArgumentException.class, () ->
+            match.updateScore(1, -2));
+    }
 }
